@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Preloader</title>
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+<style>
+body
+{
+	overflow:hidden;
+}
+#preloader
+{
+	position:fixed;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	background-color:#fff;
+	z-index:99;
+}
+#status
+{
+	width:200px;
+	height:200px;
+	position:absolute;
+	left:50%;
+	top:50%;
+	background-image:url(687474703a2f2f692e696d6775722e636f6d2f56446449444f522e676966.gif);
+	background-repeat:no-repeat;
+	background-position:center;
+	margin:-100px 0 0 -100px;
+}
+</style>
+<script>
+$(window).on("load", function(){
+							  $('#status').fadeOut();
+							  $('#preloader').delay(23350).fadeOut('slow');
+							  $('body').delay(350).css({'overflow':'visible'});
+							  });
+</script>
+</head>
+
+<body>
+<div id="preloader">
+	<div id="status">&nbsp;</div>
+</div>
+
+<div class="container">
+<img src="image-158-825x510.jpeg" alt="" />
+</div>
+</body>
+</html>
